@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomeTextFormFeildTheme {
-  CustomeTextFormFeildTheme._();
+class CustomeTextFormFieldTheme {
+  CustomeTextFormFieldTheme._();
 
   static InputDecorationTheme lightTextFormFeildTheme = InputDecorationTheme(
     errorMaxLines: 3,
