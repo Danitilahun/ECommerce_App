@@ -50,5 +50,7 @@ class Formatter {
       }
       i = end;
     }
+
+    return formattedNumber.toString();
   }
 }
