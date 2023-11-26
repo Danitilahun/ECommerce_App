@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/get_core.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/authentication/screen/signup/signup.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
@@ -22,6 +25,7 @@ class LoginForm extends StatelessWidget {
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),
           TextFormField(
+            obscureText: true,
             decoration: InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: TTexts.password,
@@ -58,7 +62,10 @@ class LoginForm extends StatelessWidget {
           SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                  onPressed: () {}, child: const Text(TTexts.createAccount))),
+                  onPressed: () {
+                    Get.to(const SignUp());
+                  },
+                  child: const Text(TTexts.createAccount))),
           const SizedBox(height: TSizes.spaceBtwSections),
         ],
       ),
