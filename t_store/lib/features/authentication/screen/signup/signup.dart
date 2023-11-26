@@ -23,7 +23,7 @@ class SignUp extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(TTexts.signupTitle,
                   style: Theme.of(context).textTheme.headlineMedium),

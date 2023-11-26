@@ -24,6 +24,7 @@ class LoginScreen extends StatelessWidget {
       child: Padding(
         padding: TSpacingStyle.paddingWithAppBarHeight,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // -- Login Header
             LoginHeader(dark: dark),
