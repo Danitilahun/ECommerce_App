@@ -32,7 +32,8 @@ class PrimaryHeaderComponet extends StatelessWidget {
                     right: -300,
                     child: CircularContainer(
                       backgroundColor: TColors.textWhite.withOpacity(0.1),
-                    ))
+                    )),
+                child
               ],
             ),
           )),
