@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:get/get_core/get_core.dart';
-import 'package:t_store/common/auth/SuccessScreen.dart';
+import 'package:t_store/common/widgets/auth/SuccessScreen.dart';
 import 'package:t_store/features/authentication/screen/login/login.dart';
 import 'package:t_store/features/authentication/screen/login/widgets/LoginForm.dart';
 import 'package:t_store/utils/constants/image_strings.dart';

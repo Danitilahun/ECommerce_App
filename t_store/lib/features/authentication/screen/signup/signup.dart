@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/auth/LoginSocialButton.dart';
-import 'package:t_store/common/form/FormDivider.dart';
+import 'package:t_store/common/widgets/auth/LoginSocialButton.dart';
+import 'package:t_store/common/widgets/form/FormDivider.dart';
 import 'package:t_store/features/authentication/screen/signup/widgets/SignUpForm.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
