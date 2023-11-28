@@ -22,11 +22,14 @@ class SectionHeader extends StatelessWidget {
       children: [
         Text(
           title,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: Theme.of(context).textTheme.headlineSmall!.apply(
                 color: textColor,
               ),
         ),
-        TextButton(onPressed: () {}, child: Text(buttonText)),
+        if (showButton)
+          TextButton(onPressed: onPressed, child: Text(buttonText)),
       ],
     );
   }
