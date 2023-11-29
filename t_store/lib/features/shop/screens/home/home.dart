@@ -82,6 +82,13 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
+                SectionHeader(
+                  title: "Popular Products",
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: TSizes.spaceBtwItems,
+                ),
                 CustomGridView(
                   itemBuilder: (_, index) => const VerticalProductCart(),
                 ),

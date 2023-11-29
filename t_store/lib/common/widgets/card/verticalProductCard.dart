@@ -5,6 +5,7 @@ import 'package:t_store/common/styles/shadow.dart';
 import 'package:t_store/common/widgets/custom_shape/RoundedCntainer.dart';
 import 'package:t_store/common/widgets/custom_shape/RoundedImage.dart';
 import 'package:t_store/common/widgets/icon/CircularIcon.dart';
+import 'package:t_store/common/widgets/text/BrandWithTitleAndVarifyIcon.dart';
 import 'package:t_store/common/widgets/text/ProductPrice.dart';
 import 'package:t_store/common/widgets/text/productTitle.dart';
 import 'package:t_store/utils/constants/colors.dart';
@@ -76,6 +77,7 @@ class VerticalProductCart extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(TSizes.sm),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const ProductTitle(
                     title: "Nike Air Max 270 React",
@@ -84,52 +86,43 @@ class VerticalProductCart extends StatelessWidget {
                   const SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "Nike",
-                        style: Theme.of(context).textTheme.labelMedium,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                      ),
-                      const SizedBox(
-                        width: TSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        size: TSizes.iconXs,
-                        color: TColors.primary,
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const ProductPrice(
-                        price: "34.4",
-                      ),
-                      Container(
-                          decoration: const BoxDecoration(
-                              color: TColors.dark,
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(TSizes.cardRadiusMd),
-                                bottomRight:
-                                    Radius.circular(TSizes.productImageRadius),
-                              )),
-                          child: const SizedBox(
-                            height: TSizes.lg * 1.2,
-                            width: TSizes.lg * 1.2,
-                            child: Center(
-                              child: Icon(
-                                Iconsax.add,
-                                color: TColors.primary,
-                              ),
-                            ),
-                          )),
-                    ],
+                  BrandWithTitleAndVarifiyIcon(
+                    title: "Nike",
                   ),
                 ],
               ),
+            ),
+
+            const Spacer(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: TSizes.sm),
+                  child: const ProductPrice(
+                    price: "34.4",
+                  ),
+                ),
+                Container(
+                    decoration: const BoxDecoration(
+                        color: TColors.dark,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(TSizes.cardRadiusMd),
+                          bottomRight:
+                              Radius.circular(TSizes.productImageRadius),
+                        )),
+                    child: const SizedBox(
+                      height: TSizes.lg * 1.2,
+                      width: TSizes.lg * 1.2,
+                      child: Center(
+                        child: Icon(
+                          Iconsax.add,
+                          color: TColors.primary,
+                        ),
+                      ),
+                    )),
+              ],
             ),
           ],
         ),
