@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
+import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class CircularImage extends StatelessWidget {
   const CircularImage({
     super.key,
-    required this.dark,
     this.width = 56,
     this.height = 56,
     this.Overlaycolor,
@@ -17,7 +17,6 @@ class CircularImage extends StatelessWidget {
     this.padding = const EdgeInsets.all(TSizes.sm),
   });
 
-  final bool dark;
   final double? width, height;
   final Color? Overlaycolor, backgroundColor;
   final BoxFit fit;
@@ -28,6 +27,7 @@ class CircularImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Container(
       width: width,
       height: height,

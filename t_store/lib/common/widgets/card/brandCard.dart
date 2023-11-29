@@ -27,7 +27,6 @@ class BrandCard extends StatelessWidget {
           children: [
             Flexible(
               child: CircularImage(
-                dark: dark,
                 image: TImages.clothIcon,
                 backgroundColor: Colors.transparent,
                 Overlaycolor: dark ? TColors.white : TColors.dark,
