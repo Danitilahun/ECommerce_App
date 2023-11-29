@@ -32,7 +32,7 @@ class SettingScreen extends StatelessWidget {
                         .apply(color: TColors.white),
                   ),
                 ),
-                UserProfile(),
+                const UserProfile(),
                 const SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
