@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:t_store/common/widgets/appBar/appBar.dart';
+import 'package:t_store/common/widgets/appBar/tabBar.dart';
+import 'package:t_store/common/widgets/brands/brandShowCase.dart';
+import 'package:t_store/common/widgets/card/brandCard.dart';
+import 'package:t_store/common/widgets/catagory/catagoryTab.dart';
 import 'package:t_store/common/widgets/custom_shape/CustomSearchBar.dart';
 import 'package:t_store/common/widgets/custom_shape/RoundedCntainer.dart';
 import 'package:t_store/common/widgets/custom_shape/SectionHeader.dart';
@@ -22,111 +26,98 @@ class StoreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
 
-    return Scaffold(
-      appBar: CustomAppBar(
-        title: Text(
-          "Store",
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
-        actions: [
-          CartCountIcon(
-            onPressed: () {},
-            iconColor: dark ? TColors.white : TColors.dark,
-            backgroundColor: dark ? TColors.white : TColors.dark,
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        appBar: CustomAppBar(
+          title: Text(
+            "Store",
+            style: Theme.of(context).textTheme.headlineMedium,
           ),
-        ],
-      ),
-      body: NestedScrollView(
-          headerSliverBuilder: (_, innerBoxScrolled) {
-            return [
-              SliverAppBar(
-                automaticallyImplyLeading: false,
-                pinned: true,
-                floating: true,
-                backgroundColor: dark ? TColors.black : TColors.white,
-                expandedHeight: 440,
-                flexibleSpace: Padding(
-                  padding: const EdgeInsets.all(TSizes.defaultSpace),
-                  child: ListView(
-                    physics: const NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    children: [
-                      const SizedBox(
-                        height: TSizes.spaceBtwItems,
-                      ),
-                      CustomSearchBar(
-                        text: "Search in Store",
-                        showBorder: true,
-                        showBackground: false,
-                        padding: EdgeInsets.zero,
-                      ),
-                      const SizedBox(
-                        height: TSizes.spaceBtwItems,
-                      ),
-                      SectionHeader(
-                        title: "Featured Brands",
-                        onPressed: () {},
-                      ),
-                      const SizedBox(
-                        height: TSizes.spaceBtwItems / 1.5,
-                      ),
-                      CustomGridView(
-                          mainAxisExtent: 80,
-                          itemBuilder: (_, index) {
-                            return GestureDetector(
-                              onTap: () {},
-                              child: RoundedContainer(
-                                padding: const EdgeInsets.all(TSizes.sm),
-                                backgroundColor: Colors.transparent,
+          actions: [
+            CartCountIcon(
+              onPressed: () {},
+              iconColor: dark ? TColors.white : TColors.dark,
+              backgroundColor: dark ? TColors.white : TColors.dark,
+            ),
+          ],
+        ),
+        body: NestedScrollView(
+            headerSliverBuilder: (_, innerBoxScrolled) {
+              return [
+                SliverAppBar(
+                  automaticallyImplyLeading: false,
+                  pinned: true,
+                  floating: true,
+                  backgroundColor: dark ? TColors.black : TColors.white,
+                  expandedHeight: 440,
+                  flexibleSpace: Padding(
+                    padding: const EdgeInsets.all(TSizes.defaultSpace),
+                    child: ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      children: [
+                        const SizedBox(
+                          height: TSizes.spaceBtwItems,
+                        ),
+                        CustomSearchBar(
+                          text: "Search in Store",
+                          showBorder: true,
+                          showBackground: false,
+                          padding: EdgeInsets.zero,
+                        ),
+                        const SizedBox(
+                          height: TSizes.spaceBtwItems,
+                        ),
+                        SectionHeader(
+                          title: "Featured Brands",
+                          onPressed: () {},
+                        ),
+                        const SizedBox(
+                          height: TSizes.spaceBtwItems / 1.5,
+                        ),
+                        CustomGridView(
+                            mainAxisExtent: 80,
+                            itemBuilder: (_, index) {
+                              return BrandCard(
                                 showBorder: true,
-                                child: Row(
-                                  // crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Flexible(
-                                      child: CircularImage(
-                                        dark: dark,
-                                        image: TImages.clothIcon,
-                                        backgroundColor: Colors.transparent,
-                                        Overlaycolor:
-                                            dark ? TColors.white : TColors.dark,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: TSizes.spaceBtwItems / 2,
-                                    ),
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          BrandWithTitleAndVarifiyIcon(
-                                            title: "Nike",
-                                            brandTextSize: TextSizes.large,
-                                          ),
-                                          Text(
-                                            "234 Products refefergggggggggggggggggggg",
-                                            overflow: TextOverflow.ellipsis,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .labelMedium,
-                                          )
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            );
-                          })
+                              );
+                            })
+                      ],
+                    ),
+                  ),
+                  bottom: CustomTabBar(
+                    tabs: [
+                      Tab(
+                        text: "Sports",
+                      ),
+                      Tab(
+                        text: "Clothing",
+                      ),
+                      Tab(
+                        text: "Shoes",
+                      ),
+                      Tab(
+                        text: "Electronics",
+                      ),
+                      Tab(
+                        text: "Furniture",
+                      ),
                     ],
                   ),
                 ),
-              ),
-            ];
-          },
-          body: Container()),
+              ];
+            },
+            body: const TabBarView(
+              children: [
+                CatagoryTab(),
+                CatagoryTab(),
+                CatagoryTab(),
+                CatagoryTab(),
+                CatagoryTab(),
+              ],
+            )),
+      ),
     );
   }
 }

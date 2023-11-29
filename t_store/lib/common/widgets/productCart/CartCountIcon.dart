@@ -35,10 +35,9 @@ class CartCountIcon extends StatelessWidget {
               child: Center(
                   child: Text(
                 '0',
-                style: Theme.of(context)
-                    .textTheme
-                    .labelLarge!
-                    .apply(color: TColors.primary, fontSizeFactor: 0.8),
+                style: Theme.of(context).textTheme.labelLarge!.apply(
+                    color: dark ? TColors.black : TColors.white,
+                    fontSizeFactor: 0.8),
               )),
             ))
       ],
