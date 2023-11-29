@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appBar/appBar.dart';
+import 'package:t_store/common/widgets/card/verticalProductCard.dart';
 import 'package:t_store/common/widgets/custom_shape/CircularAndVerticalListViewItem.dart';
 import 'package:t_store/common/widgets/custom_shape/CircularContainer.dart';
 import 'package:t_store/common/widgets/custom_shape/CurvedEdgeWidget.dart';
@@ -11,6 +12,7 @@ import 'package:t_store/common/widgets/custom_shape/CustomSearchBar.dart';
 import 'package:t_store/common/widgets/custom_shape/RoundedImage.dart';
 import 'package:t_store/common/widgets/custom_shape/SectionHeader.dart';
 import 'package:t_store/common/widgets/custom_shape/curved_shapes.dart';
+import 'package:t_store/common/widgets/layout/gridView.dart';
 import 'package:t_store/common/widgets/productCart/CartCountIcon.dart';
 import 'package:t_store/features/shop/controllers/homeController.dart';
 import 'package:t_store/features/shop/screens/home/widgets/HomeAppBar.dart';
@@ -32,28 +34,28 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          PrimaryHeaderComponet(
+          const PrimaryHeaderComponet(
             child: Column(
               children: [
                 HomeAppBar(),
-                const SizedBox(
+                SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
                 CustomSearchBar(
                   text: "Search in store",
                 ),
-                const SizedBox(
+                SizedBox(
                   height: TSizes.spaceBtwItems,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: TSizes.defaultSpace),
+                  padding: EdgeInsets.only(left: TSizes.defaultSpace),
                   child: Column(
                     children: [
                       SectionHeader(
                         title: "Popular Categories",
                         showButton: false,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: TSizes.spaceBtwItems,
                       ),
                       HomeCatagories(),
@@ -68,11 +70,21 @@ class HomeScreen extends StatelessWidget {
 
           Padding(
             padding: const EdgeInsets.all(TSizes.defaultSpace),
-            child: PromotionSlider(
-              banners: [
-                TImages.banner1,
-                TImages.banner2,
-                TImages.banner3,
+            child: Column(
+              children: [
+                const PromotionSlider(
+                  banners: [
+                    TImages.banner1,
+                    TImages.banner2,
+                    TImages.banner3,
+                  ],
+                ),
+                const SizedBox(
+                  height: TSizes.spaceBtwSections,
+                ),
+                CustomGridView(
+                  itemBuilder: (_, index) => const VerticalProductCart(),
+                ),
               ],
             ),
           ),
