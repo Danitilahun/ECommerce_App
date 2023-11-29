@@ -30,7 +30,7 @@ class CircularAndVerticalListViewItem extends StatelessWidget {
             Container(
               width: 56,
               height: 56,
-              padding: EdgeInsets.all(TSizes.sm),
+              padding: const EdgeInsets.all(TSizes.sm),
               decoration: BoxDecoration(
                 color: dark ? TColors.black : TColors.white,
                 borderRadius: BorderRadius.circular(100),

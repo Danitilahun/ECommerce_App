@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
@@ -29,11 +28,9 @@ class CircularIcon extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(100),
-          color: backgroundColor != null
-              ? backgroundColor
-              : dark
+          color: backgroundColor ?? (dark
                   ? TColors.black.withOpacity(0.9)
-                  : TColors.white.withOpacity(0.9)),
+                  : TColors.white.withOpacity(0.9))),
       child: IconButton(
         onPressed: onPressed,
         icon: Icon(

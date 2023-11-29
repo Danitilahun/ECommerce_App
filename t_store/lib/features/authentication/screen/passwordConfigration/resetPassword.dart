@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/features/authentication/screen/login/login.dart';
-import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
@@ -30,7 +29,7 @@ class ResetPassword extends StatelessWidget {
         child: Column(
           children: [
             Image(
-                image: AssetImage(TImages.deliveredEmailIllustration),
+                image: const AssetImage(TImages.deliveredEmailIllustration),
                 width: THelperFunctions.screenWidth() * 0.6),
 
             const SizedBox(height: TSizes.spaceBtwItems),
@@ -59,7 +58,7 @@ class ResetPassword extends StatelessWidget {
                     },
                     child: Text(
                       TTexts.done,
-                      style: Theme.of(context).textTheme.button,
+                      style: Theme.of(context).textTheme.labelLarge,
                     ))),
 
             const SizedBox(height: TSizes.spaceBtwSections),
@@ -70,7 +69,7 @@ class ResetPassword extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       TTexts.resendEmail,
-                      style: Theme.of(context).textTheme.button,
+                      style: Theme.of(context).textTheme.labelLarge,
                     ))),
           ],
         ),

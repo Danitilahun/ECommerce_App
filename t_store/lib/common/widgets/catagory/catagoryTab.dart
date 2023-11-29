@@ -38,7 +38,7 @@ class CatagoryTab extends StatelessWidget {
                 CustomGridView(
                     itemCount: 4,
                     itemBuilder: (_, index) {
-                      return VerticalProductCart();
+                      return const VerticalProductCart();
                     })
               ],
             ),

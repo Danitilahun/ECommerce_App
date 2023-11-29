@@ -17,8 +17,8 @@ class BrandShowCase extends StatelessWidget {
       borderColor: TColors.darkGrey,
       backgroundColor: Colors.transparent,
       showBorder: true,
-      padding: EdgeInsets.all(TSizes.md),
-      margin: EdgeInsets.only(bottom: TSizes.defaultSpace),
+      padding: const EdgeInsets.all(TSizes.md),
+      margin: const EdgeInsets.only(bottom: TSizes.defaultSpace),
       child: Column(
         children: [
           const BrandCard(),
@@ -37,7 +37,7 @@ class BrandShowCase extends StatelessWidget {
       child: RoundedContainer(
         height: 100,
         padding: const EdgeInsets.all(TSizes.md),
-        margin: EdgeInsets.only(right: TSizes.sm),
+        margin: const EdgeInsets.only(right: TSizes.sm),
         backgroundColor: dark ? TColors.darkerGrey : TColors.light,
         child: Image(
           image: AssetImage(image),

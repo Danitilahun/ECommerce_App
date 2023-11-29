@@ -41,7 +41,7 @@ class BrandCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  BrandWithTitleAndVarifiyIcon(
+                  const BrandWithTitleAndVarifiyIcon(
                     title: "Nike",
                     brandTextSize: TextSizes.large,
                   ),

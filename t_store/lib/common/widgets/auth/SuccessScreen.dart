@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/styles/spacingStyle.dart';
 
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
@@ -26,7 +25,7 @@ class SuccessScreen extends StatelessWidget {
         padding: TSpacingStyle.paddingWithAppBarHeight,
         child: SingleChildScrollView(
             child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               // Image
@@ -59,7 +58,7 @@ class SuccessScreen extends StatelessWidget {
                       onPressed: onPressed,
                       child: Text(
                         TTexts.tContinue,
-                        style: Theme.of(context).textTheme.button,
+                        style: Theme.of(context).textTheme.labelLarge,
                       ))),
             ],
           ),

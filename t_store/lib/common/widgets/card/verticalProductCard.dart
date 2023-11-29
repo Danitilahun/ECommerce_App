@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/styles/shadow.dart';
 import 'package:t_store/common/widgets/custom_shape/RoundedCntainer.dart';
@@ -23,7 +22,7 @@ class VerticalProductCart extends StatelessWidget {
       onTap: () {},
       child: Container(
         width: 180,
-        padding: EdgeInsets.all(1),
+        padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
           boxShadow: [ShadowStyles.VerticalProductShadow],
           borderRadius: BorderRadius.circular(TSizes.productImageRadius),
@@ -35,7 +34,7 @@ class VerticalProductCart extends StatelessWidget {
 
             RoundedContainer(
               height: 180,
-              padding: EdgeInsets.all(TSizes.sm),
+              padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.white,
               child: Stack(children: [
                 const RoundedImage(
@@ -74,16 +73,16 @@ class VerticalProductCart extends StatelessWidget {
             const SizedBox(
               height: TSizes.spaceBtwItems / 2,
             ),
-            Padding(
-              padding: const EdgeInsets.all(TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.all(TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ProductTitle(
+                  ProductTitle(
                     title: "Nike Air Max 270 React",
                     smallSize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
                   BrandWithTitleAndVarifiyIcon(
@@ -98,9 +97,9 @@ class VerticalProductCart extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: TSizes.sm),
-                  child: const ProductPrice(
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: ProductPrice(
                     price: "34.4",
                   ),
                 ),

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/shop/screens/home/home.dart';
 import 'package:t_store/features/shop/screens/store/store.dart';
+import 'package:t_store/features/shop/screens/wishlist/wishList.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
@@ -26,7 +27,7 @@ class NavigationMenu extends StatelessWidget {
           indicatorColor: dark
               ? TColors.white.withOpacity(0.1)
               : TColors.black.withOpacity(0.1),
-          destinations: [
+          destinations: const [
             NavigationDestination(
               icon: Icon(Iconsax.home),
               label: 'Home',
@@ -62,7 +63,7 @@ class NavigationController extends GetxController {
   final List<Widget> screens = [
     const HomeScreen(),
     const StoreScreen(),
-    Container(color: Colors.blue),
+    const WishList(),
     Container(color: Colors.yellow),
   ];
 }

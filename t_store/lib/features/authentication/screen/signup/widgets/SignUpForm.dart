@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/get_core.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/authentication/screen/signup/verifyEmail.dart';
 import 'package:t_store/features/authentication/screen/signup/widgets/TermAndConditionCheckout.dart';
@@ -24,7 +23,7 @@ class SignUpForm extends StatelessWidget {
           Expanded(
             child: TextFormField(
               expands: false,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: TTexts.firstName,
                 prefixIcon: Icon(Iconsax.user),
               ),
@@ -33,7 +32,7 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(width: TSizes.spaceBtwInputFields),
           Expanded(
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: TTexts.lastName,
                 prefixIcon: Icon(Iconsax.user),
               ),
@@ -43,21 +42,21 @@ class SignUpForm extends StatelessWidget {
       ),
       const SizedBox(height: TSizes.spaceBtwInputFields),
       TextFormField(
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           labelText: TTexts.username,
           prefixIcon: Icon(Iconsax.user_edit),
         ),
       ),
       const SizedBox(height: TSizes.spaceBtwInputFields),
       TextFormField(
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           labelText: TTexts.email,
           prefixIcon: Icon(Iconsax.message),
         ),
       ),
       const SizedBox(height: TSizes.spaceBtwInputFields),
       TextFormField(
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           labelText: TTexts.phoneNo,
           prefixIcon: Icon(Iconsax.mobile),
         ),
@@ -65,7 +64,7 @@ class SignUpForm extends StatelessWidget {
       const SizedBox(height: TSizes.spaceBtwInputFields),
       TextFormField(
         obscureText: true,
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           prefixIcon: Icon(Iconsax.password_check),
           labelText: TTexts.password,
           suffixIcon: Icon(Iconsax.eye_slash),

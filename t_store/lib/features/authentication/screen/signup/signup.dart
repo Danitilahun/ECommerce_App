@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/auth/LoginSocialButton.dart';
 import 'package:t_store/common/widgets/form/FormDivider.dart';
 import 'package:t_store/features/authentication/screen/signup/widgets/SignUpForm.dart';
@@ -21,7 +19,7 @@ class SignUp extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -40,7 +38,7 @@ class SignUp extends StatelessWidget {
 
               const SizedBox(height: TSizes.spaceBtwItems),
 
-              SocialButton(),
+              const SocialButton(),
             ],
           ),
         ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/custom_shape/curved_shapes.dart';
-import 'package:t_store/utils/constants/colors.dart';
 
 class CurvedEdgeWidget extends StatelessWidget {
   const CurvedEdgeWidget({

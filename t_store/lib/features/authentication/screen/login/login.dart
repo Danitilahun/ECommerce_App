@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
-import 'package:get/get_utils/get_utils.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/common/styles/spacingStyle.dart';
 import 'package:t_store/common/widgets/form/FormDivider.dart';
 import 'package:t_store/features/authentication/screen/login/widgets/LoginForm.dart';
@@ -29,7 +24,7 @@ class LoginScreen extends StatelessWidget {
             // -- Login Header
             LoginHeader(dark: dark),
             // -- Login Form
-            LoginForm(),
+            const LoginForm(),
             // -- Form divider
             FormDivider(
               dark: dark,
@@ -38,7 +33,7 @@ class LoginScreen extends StatelessWidget {
             // -- Space between sections
             const SizedBox(height: TSizes.spaceBtwSections),
             // -- Social Login Buttons
-            SocialButton()
+            const SocialButton()
           ],
         ),
       ),

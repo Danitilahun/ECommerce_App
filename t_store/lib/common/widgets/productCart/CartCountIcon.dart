@@ -9,11 +9,13 @@ class CartCountIcon extends StatelessWidget {
     this.iconColor = TColors.black,
     this.backgroundColor,
     required this.onPressed,
+    this.icon = Iconsax.shopping_cart,
   });
 
   final Color iconColor;
   final VoidCallback onPressed;
   final Color? backgroundColor;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
@@ -21,7 +23,7 @@ class CartCountIcon extends StatelessWidget {
       children: [
         IconButton(
           onPressed: onPressed,
-          icon: Icon(Iconsax.shopping_bag, color: iconColor),
+          icon: Icon(icon, color: iconColor),
         ),
         Positioned(
             top: 1,

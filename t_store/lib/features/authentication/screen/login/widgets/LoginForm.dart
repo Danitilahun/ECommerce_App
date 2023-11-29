@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/get_core.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/authentication/screen/passwordConfigration/forgetPassword.dart';
 import 'package:t_store/features/authentication/screen/signup/signup.dart';
@@ -17,18 +16,18 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
         child: Padding(
-      padding: EdgeInsets.symmetric(vertical: TSizes.spaceBtwInputFields),
+      padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwInputFields),
       child: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 labelText: TTexts.email,
                 prefixIcon: Icon(Iconsax.direct_right)),
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),
           TextFormField(
             obscureText: true,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: TTexts.password,
                 suffixIcon: Icon(Iconsax.eye_slash)),

@@ -1,21 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:t_store/common/widgets/appBar/appBar.dart';
 import 'package:t_store/common/widgets/appBar/tabBar.dart';
-import 'package:t_store/common/widgets/brands/brandShowCase.dart';
 import 'package:t_store/common/widgets/card/brandCard.dart';
 import 'package:t_store/common/widgets/catagory/catagoryTab.dart';
 import 'package:t_store/common/widgets/custom_shape/CustomSearchBar.dart';
-import 'package:t_store/common/widgets/custom_shape/RoundedCntainer.dart';
 import 'package:t_store/common/widgets/custom_shape/SectionHeader.dart';
-import 'package:t_store/common/widgets/image/CircularImage.dart';
 import 'package:t_store/common/widgets/layout/gridView.dart';
 import 'package:t_store/common/widgets/productCart/CartCountIcon.dart';
-import 'package:t_store/common/widgets/text/BrandTitleText.dart';
-import 'package:t_store/common/widgets/text/BrandWithTitleAndVarifyIcon.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/enums.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
@@ -60,7 +52,7 @@ class StoreScreen extends StatelessWidget {
                         const SizedBox(
                           height: TSizes.spaceBtwItems,
                         ),
-                        CustomSearchBar(
+                        const CustomSearchBar(
                           text: "Search in Store",
                           showBorder: true,
                           showBackground: false,
@@ -79,14 +71,14 @@ class StoreScreen extends StatelessWidget {
                         CustomGridView(
                             mainAxisExtent: 80,
                             itemBuilder: (_, index) {
-                              return BrandCard(
+                              return const BrandCard(
                                 showBorder: true,
                               );
                             })
                       ],
                     ),
                   ),
-                  bottom: CustomTabBar(
+                  bottom: const CustomTabBar(
                     tabs: [
                       Tab(
                         text: "Sports",

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/get_core.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/authentication/screen/login/login.dart';
 import 'package:t_store/features/authentication/screen/passwordConfigration/resetPassword.dart';
-import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
@@ -38,7 +36,7 @@ class ForgetPassword extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwSections * 2),
 
             //  Form
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 labelText: TTexts.email,
                 prefixIcon: Icon(Iconsax.direct_right),
@@ -53,7 +51,7 @@ class ForgetPassword extends StatelessWidget {
                 onPressed: () {
                   Get.off(() => const ResetPassword());
                 },
-                child: Text(TTexts.submit),
+                child: const Text(TTexts.submit),
               ),
             ),
           ]),

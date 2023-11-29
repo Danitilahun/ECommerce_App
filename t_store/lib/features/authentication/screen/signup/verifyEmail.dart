@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
-import 'package:get/get_core/get_core.dart';
 import 'package:t_store/common/widgets/auth/SuccessScreen.dart';
 import 'package:t_store/features/authentication/screen/login/login.dart';
-import 'package:t_store/features/authentication/screen/login/widgets/LoginForm.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
@@ -33,7 +30,7 @@ class VerifyEmail extends StatelessWidget {
             // Image
 
             Image(
-                image: AssetImage(TImages.deliveredEmailIllustration),
+                image: const AssetImage(TImages.deliveredEmailIllustration),
                 width: THelperFunctions.screenWidth() * 0.6),
 
             const SizedBox(height: TSizes.spaceBtwItems),
@@ -76,7 +73,7 @@ class VerifyEmail extends StatelessWidget {
                     },
                     child: Text(
                       TTexts.tContinue,
-                      style: Theme.of(context).textTheme.button,
+                      style: Theme.of(context).textTheme.labelLarge,
                     ))),
 
             const SizedBox(height: TSizes.spaceBtwSections),
@@ -87,7 +84,7 @@ class VerifyEmail extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       TTexts.resendEmail,
-                      style: Theme.of(context).textTheme.button,
+                      style: Theme.of(context).textTheme.labelLarge,
                     ))),
           ],
         ),
