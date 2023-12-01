@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:t_store/common/widgets/appBar/appBar.dart';
 import 'package:t_store/common/widgets/appBar/tabBar.dart';
 import 'package:t_store/common/widgets/card/brandCard.dart';
@@ -7,6 +8,7 @@ import 'package:t_store/common/widgets/custom_shape/CustomSearchBar.dart';
 import 'package:t_store/common/widgets/custom_shape/SectionHeader.dart';
 import 'package:t_store/common/widgets/layout/gridView.dart';
 import 'package:t_store/common/widgets/productCart/CartCountIcon.dart';
+import 'package:t_store/features/shop/screens/cart/cartScreen.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
@@ -28,7 +30,9 @@ class StoreScreen extends StatelessWidget {
           ),
           actions: [
             CartCountIcon(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const Cart());
+              },
               iconColor: dark ? TColors.white : TColors.dark,
               backgroundColor: dark ? TColors.white : TColors.dark,
             ),
