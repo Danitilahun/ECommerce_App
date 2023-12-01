@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:t_store/common/widgets/custom_shape/CircularAndVerticalListViewItem.dart';
+import 'package:t_store/features/shop/screens/subCatagoryScreen/subCatagoryScreen.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 
 class HomeCatagories extends StatelessWidget {
@@ -19,7 +21,9 @@ class HomeCatagories extends StatelessWidget {
           return CircularAndVerticalListViewItem(
             title: "Shoes catagories",
             image: TImages.shoeIcon,
-            onTab: () {},
+            onTab: () {
+              Get.to(() => const SubCatagoryScreen());
+            },
           );
         },
       ),
