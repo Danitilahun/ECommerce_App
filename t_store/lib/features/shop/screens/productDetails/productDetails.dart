@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appBar/appBar.dart';
 import 'package:t_store/common/widgets/custom_shape/CurvedEdgeWidget.dart';
 import 'package:t_store/common/widgets/custom_shape/RoundedImage.dart';
 import 'package:t_store/common/widgets/custom_shape/SectionHeader.dart';
 import 'package:t_store/common/widgets/icon/CircularIcon.dart';
+import 'package:t_store/common/widgets/readMore/CustomReadMore.dart';
 import 'package:t_store/features/shop/screens/productDetails/widgets/AddToCart.dart';
 import 'package:t_store/features/shop/screens/productDetails/widgets/ProductImageSlider.dart';
 import 'package:t_store/features/shop/screens/productDetails/widgets/RatingAndShare.dart';
 import 'package:t_store/features/shop/screens/productDetails/widgets/productAttribute.dart';
 import 'package:t_store/features/shop/screens/productDetails/widgets/productMetaData.dart';
+import 'package:t_store/features/shop/screens/productReview/productReview.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:readmore/readmore.dart';
@@ -53,17 +56,9 @@ class ProductDetails extends StatelessWidget {
                   const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
-                  const ReadMoreText(
-                    'Step into sophistication and style with our latest shoe variant. Elevate your fashion game with enhanced comfort and trendsetting design. Redefine your stride with this must-have footwear variation.',
-                    trimLines: 2,
-                    colorClickableText: Colors.pink,
-                    trimMode: TrimMode.Line,
-                    trimCollapsedText: 'Show more',
-                    trimExpandedText: 'Show less',
-                    moreStyle:
-                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
-                    lessStyle:
-                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                  CustomReadMore(
+                    text:
+                        'Step into sophistication and style with our latest shoe variant. Elevate your fashion game with enhanced comfort and trendsetting design. Redefine your stride with this must-have footwear variation.',
                   ),
                   const Divider(),
                   const SizedBox(
@@ -81,7 +76,9 @@ class ProductDetails extends StatelessWidget {
                           Iconsax.arrow_right_3,
                           size: 18,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(const ProductReview());
+                        },
                       )
                     ],
                   ),
