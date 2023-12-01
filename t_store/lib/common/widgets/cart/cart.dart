@@ -7,8 +7,8 @@ import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-class CartItem extends StatelessWidget {
-  const CartItem({
+class SingleCartItem extends StatelessWidget {
+  const SingleCartItem({
     super.key,
   });
 

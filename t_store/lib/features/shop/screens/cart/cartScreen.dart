@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appBar/appBar.dart';
 import 'package:t_store/common/widgets/cart/ProductQuantityWithRemoveButton.dart';
@@ -8,6 +9,8 @@ import 'package:t_store/common/widgets/icon/CircularIcon.dart';
 import 'package:t_store/common/widgets/text/BrandWithTitleAndVarifyIcon.dart';
 import 'package:t_store/common/widgets/text/ProductPrice.dart';
 import 'package:t_store/common/widgets/text/productTitle.dart';
+import 'package:t_store/features/shop/screens/cart/widgets/CartItems.dart';
+import 'package:t_store/features/shop/screens/checkOut/checkout.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -30,42 +33,16 @@ class Cart extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(TSizes.defaultSpace),
-          child: ListView.separated(
-              shrinkWrap: true,
-              itemBuilder: (_, index) {
-                return Column(
-                  children: [
-                    CartItem(),
-                    const SizedBox(
-                      height: TSizes.spaceBtwItems,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 70,
-                            ),
-                            ProductQuantityWithRemoveButton(),
-                          ],
-                        ),
-                        ProductPrice(
-                          price: "34",
-                        )
-                      ],
-                    )
-                  ],
-                );
-              },
-              separatorBuilder: (_, __) =>
-                  const SizedBox(height: TSizes.spaceBtwSections),
-              itemCount: 4),
+          child: CartItems(),
         ),
       ),
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(TSizes.defaultSpace),
-        child: ElevatedButton(onPressed: () {}, child: Text("CheckOut \$345")),
+        child: ElevatedButton(
+            onPressed: () {
+              Get.to(const CheckOut());
+            },
+            child: Text("CheckOut \$345")),
       ),
     );
   }
