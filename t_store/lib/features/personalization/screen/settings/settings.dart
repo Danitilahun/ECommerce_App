@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appBar/appBar.dart';
@@ -6,6 +7,7 @@ import 'package:t_store/common/widgets/custom_shape/SectionHeader.dart';
 import 'package:t_store/common/widgets/image/CircularImage.dart';
 import 'package:t_store/common/widgets/listTile/SettingMenu.dart';
 import 'package:t_store/common/widgets/listTile/UserProfile.dart';
+import 'package:t_store/features/personalization/screen/address/address.dart';
 import 'package:t_store/features/shop/screens/home/widgets/PrimaryHeaderComponet.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
@@ -50,9 +52,13 @@ class SettingScreen extends StatelessWidget {
                     height: TSizes.spaceBtwItems,
                   ),
                   SettingMenuTile(
-                      title: "My Addresses",
-                      icon: Iconsax.safe_home,
-                      subtitle: "Set shop delivery address"),
+                    title: "My Addresses",
+                    icon: Iconsax.safe_home,
+                    subtitle: "Set shop delivery address",
+                    onTab: () {
+                      Get.to(const UserAddress());
+                    },
+                  ),
                   SettingMenuTile(
                       title: "My Cart",
                       icon: Iconsax.shopping_cart,

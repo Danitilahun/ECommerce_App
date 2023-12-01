@@ -33,7 +33,11 @@ class ProductReview extends StatelessWidget {
                 height: TSizes.spaceBtwSections,
               ),
               OverAllProductRating(),
+              const SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   CustomRatingBarIndicator(
                     rating: 4,
