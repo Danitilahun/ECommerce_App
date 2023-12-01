@@ -8,6 +8,7 @@ import 'package:t_store/common/widgets/custom_shape/CustomSearchBar.dart';
 import 'package:t_store/common/widgets/custom_shape/SectionHeader.dart';
 import 'package:t_store/common/widgets/layout/gridView.dart';
 import 'package:t_store/common/widgets/productCart/CartCountIcon.dart';
+import 'package:t_store/features/shop/screens/allBrand/allBrand.dart';
 import 'package:t_store/features/shop/screens/cart/cartScreen.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -67,7 +68,9 @@ class StoreScreen extends StatelessWidget {
                         ),
                         SectionHeader(
                           title: "Featured Brands",
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(() => const AllBrand());
+                          },
                         ),
                         const SizedBox(
                           height: TSizes.spaceBtwItems / 1.5,

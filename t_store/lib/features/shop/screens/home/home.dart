@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:t_store/common/widgets/card/verticalProductCard.dart';
 import 'package:t_store/common/widgets/custom_shape/CustomSearchBar.dart';
 import 'package:t_store/common/widgets/custom_shape/SectionHeader.dart';
 import 'package:t_store/common/widgets/layout/gridView.dart';
+import 'package:t_store/features/shop/screens/allProduct/AllProducts.dart';
 import 'package:t_store/features/shop/screens/home/widgets/HomeAppBar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/HomeCatagories.dart';
 import 'package:t_store/features/shop/screens/home/widgets/PrimaryHeaderComponet.dart';
@@ -18,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          const PrimaryHeaderComponet(
+          PrimaryHeaderComponet(
             child: Column(
               children: [
                 HomeAppBar(),
@@ -71,7 +73,9 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SectionHeader(
                   title: "Popular Products",
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => const AllProduct());
+                  },
                 ),
                 const SizedBox(
                   height: TSizes.spaceBtwItems,

@@ -56,7 +56,7 @@ class OrderList extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: TSizes.spaceBtwSections,
+            height: TSizes.spaceBtwSections / 2,
           ),
           Row(
             children: [
